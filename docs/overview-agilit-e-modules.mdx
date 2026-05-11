@@ -1,0 +1,147 @@
+---
+title: "Overview of Agilit-e Modules"
+description: "This section provides an overview of each of the Agilit-e modules"
+---
+
+[Suggest Edits](/edit/overview-agilit-e-modules)
+
+## Agilit-e Modules
+
+## **API Keys**
+
+The API Keys module allows you to create API Key Profiles each with custom privileges, these profiles can be used to generate API Keys. The API Key Profiles can also be disabled so that it can no longer be used in requests and it can be reset to generate a new API Key.
+
+For more information, including examples and tutorials, see the [API Keys](/docs/api-keys-overview) documentation.
+
+## **Numbering**
+
+Numbering is a module that allows for the creation and management of Numbering profiles, which Agilit-e uses to generate unique numbers whenever requested. E.g. If you have a Purchase Order application and each document captured requires a unique number (e.g. PO001, PO002, etc.), you profile the rule for this number in Agilit-e and via a Web API, receive a unique number on every request.
+
+For more information, including examples and tutorials, see the [Numbering](/docs/numbering-overview) documentation.
+
+## **Keywords**
+
+Keywords is a module that allows for the creation and management of various lists and key/value pairs that can be used either programmatically or for capture forms. Examples of lists that can be configured are:
+
+* Countries
+* Leave Types
+* Departments
+* Branches
+* etc.
+
+Keywords can also be used to store and reference key/value pairs. Examples of this include:
+
+* Creating a Keyword profile that holds the connection details for a specific server
+* Returning the email address for the Support Desk team of the company you work for
+* etc.
+
+For more information, including examples and tutorials, see the [Keywords](/docs/keywords-overview) documentation.
+
+## **Tier Structures**
+
+Tier Structures is a module that allows for the creation and management of various lists and key/value pairs in different **Tiers** that can be used either programmatically or for capture forms. Examples of lists that can be configured are:
+
+* Countries
+* Leave Types
+* Departments
+* Branches
+* etc.
+
+Tier Structures can also be used to store and reference key/value pairs in multiple **Tiers** . Examples of this include:
+
+* Creating a Keyword profile that holds the connection details for a specific server
+* Returning the email address for the Support Desk team of the company you work for
+* etc.
+
+For more information, including examples and tutorials, see the [Tier Structures](/docs/tier-structures-overview) documentation.
+
+## **Connectors**
+
+Connectors is a module that allows for the creation and management of API profiles for various 3rd party applications and services, whether on-premise or in the cloud. Whether it be Web APIs, IMAP, Active Directory or SQL, Connectors remove the complexity of integrating with these services.
+
+For more information, including examples and tutorials, see the [Connectors](/docs/connectors-overview) documentation.
+
+## **Data Mapping**
+
+Data Mapping is a module that allows data to be translated from one format to another. Most common examples is converting JSON from one format into another JSON format, Excel documents into JSON, etc.
+
+For more information, including examples and tutorials, see the [Data Mapping](/docs/data-mapping-overview) documentation.
+
+## **Templates**
+
+Templates is a module that allows you to store various scripts or text. Whenever these templates are required, you can return them via a Web API. Examples of this include:
+
+* Storing a HTML template that's used whenever a certain mail notification needs to be sent. You call an API to receive the HTML Template, which you then append to the body of the mail before submitting
+* Storing SQL scripts or JSON templates that can be retrieved via an API whenever the scripts need to be referenced for execution
+
+For more information, including examples and tutorials, see the [Templates](/docs/templates-overview) documentation.
+
+## **BPM (Business Process Management)**
+
+The BPM module allows for the configuring and profiling of end-to-end business processes for one or more applications. Each business process will be connected to a BPM profile, which will have one to many Process Steps. Each Process Step will have one to many Option Profiles.
+
+Together, the BPM profile, Process Steps and Step Options form the entire business process for a specific application.
+
+Agilit-e provides services over and above these profiles, that allow one to:
+
+* Register a 3rd party record/document with a specific BPM process
+* Execute a BPM process for a specific record/document
+* Determine a record/document(s) state within the business process
+* Return the record/document(s) history within the business process
+* etc.
+
+For more information, including examples and tutorials, see the [BPM](/docs/bpm-overview) documentation.
+
+## **Roles**
+
+The Roles module allows for the configuring and profiling of users and their role(s) within an organisation, whether holistically or tier-based. This eliminates hardcoding user ids into business processes and rather referencing a role to determine the responsible user. Roles work hand-in-hand with the BPM module, but can also function independently if and when required.
+
+For more information, including examples and tutorials, see the [Roles](/docs/roles-overview) documentation.
+
+## **Gateway Adapters**
+
+Coming soon!!!
+
+## **Utility Services**
+
+Agilit-e provides a number of utility services which assist in shortening development time and eliminating the need of installing certain modules and feature's natively in one's application. Examples of these services include:
+
+* Generating PDF's programmatically
+* Converting HTML to JSON
+* Encoding and Decoding XML
+* Converting XML to JSON
+* Formatting Date/Time Values
+* Generating UUIDs
+* etc.
+
+For more information, including examples and tutorials, see the [Utility Services](/docs/utility-services-overview) documentation.
+
+## **Dashboard Reports**
+
+Dashboard Reports is a dashboard that displays graphs and charts relevant to the APIs that were executed whether they were successful or not. Custom Date Ranges can also be specified.
+
+For more information, including examples and tutorials, see the [Dashboard Reports](/docs/dashboards-overview) documentation.
+
+***
+
+What’s Next
+
+* [User Registration and Sign In](/docs/user-registration-and-sign-in)
+
+Copy Page
+
+* [Table of Contents](#)
+
+* * [Agilit-e Modules](#agilit-e-modules)
+  * [**API Keys**](#api-keys)
+  * [**Numbering**](#numbering)
+  * [**Keywords**](#keywords)
+  * [**Tier Structures**](#tier-structures)
+  * [**Connectors**](#connectors)
+  * [**Data Mapping**](#data-mapping)
+  * [**Templates**](#templates)
+  * [**BPM (Business Process Management)**](#bpm-business-process-management)
+  * [**Roles**](#roles)
+  * [**Gateway Adapters**](#gateway-adapters)
+  * [**Utility Services**](#utility-services)
+  * [**Dashboard Reports**](#dashboard-reports)

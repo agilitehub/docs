@@ -1,0 +1,61 @@
+---
+title: "JSON to JSON Data Mapping Profile"
+description: "In this section you will learn how to create a Data Mapping profile that maps over a JSON Object and creates a new JSON Object based on the first objects data."
+---
+
+[Suggest Edits](/edit/json-to-json-data-mapping-profile)
+
+1. Create a new Data Mapping profile using the Create New button.
+
+![826](/images/docs/e2c8973-Data-Mapping-Create-New.png "Data-Mapping-Create-New.png")
+
+2. Populate the Data Mapping profile: *General Tab*
+
+* Profile Key: json2json
+* Profile Name: JSON To JSON
+* Source Type: JSON
+* Destination Type: JSON
+
+![2832](/images/docs/2ccaec2-json2json_form.png "json2json_form.png")
+
+3. In the Source Details Tab specify the *Starting Point* of the JSON object that was passed. In this case we are going to pass a JSON Object with a *data* property where we will start to map the data and create the new JSON Object.
+
+![1762](/images/docs/0aac103-Data_Mapping_Source_Details_JSON2Excel.png "Data_Mapping_Source_Details_JSON2Excel.png")
+
+4. In the Destination Details Tab select the Output Type as *Create JSON Object*
+
+![1658](/images/docs/704ddf7-Data_Mapping_Destination_JSON.png "Data_Mapping_Destination_JSON.png")
+
+5. Navigate to the Field Mappings Tab and Create a new Field Mapping by clicking on the `Create New` button.
+
+Field Mappings will contain the Source and Destination Configurations of the JSON Objects.
+
+![2354](/images/docs/e57da14-Data_Mapping_New_Field_Mapping.png "Data_Mapping_New_Field_Mapping.png")
+
+6. Populate the Field Mapping Form
+
+General Details
+
+* Mapping Name: *userData*
+
+Source Details
+
+* Attribute Name: *name* (Property in JSON Object)
+
+Destination Details
+
+* Attribute Name: *firstName* (Property in **new** JSON Object)
+
+![1976](/images/docs/a0a43b9-json2json_fieldMapping_form.png "json2json_fieldMapping_form.png")
+
+7. Click on the "Ok" button to save the Mapping Profile.
+
+![2348](/images/docs/38c5197-json2json_fieldMapping_view.png "json2json_fieldMapping_view.png")
+
+8. Click the "Submit" button to save and close the Data Mapping Profile.
+
+***
+
+What’s Next
+
+* [Execute Your JSON to JSON Data Mapping Profile](/docs/execute-your-json-to-json-data-mapping-profile)

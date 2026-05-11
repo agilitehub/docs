@@ -1,0 +1,53 @@
+---
+title: "Test Your Numbering Profile"
+description: "Interact with your Numbering profile via Agilit-e API Server"
+---
+
+[Suggest Edits](/edit/test-your-numbering-profile)
+
+Go to the [Agilit-e API Reference](/reference) page.
+
+1. Navigate to the Numbering Execution APIs category under the Agilit-e Numbering section, followed by clicking on the `/generate` menu item.
+
+![494](/images/docs/6eb4ef1-Numbering-Generate.png "Numbering-Generate.png")
+
+2. Click on the user icon on the top right of the API logic and populate the generated Agilit-e token into the `api-key` field.
+
+* **Note:** Once the API Key is provided for one API, it will exist for the rest
+
+<Warning>
+  **Note:** You will need to create an API Key, as mentioned earlier in the [API Keys Module](/docs/api-keys-overview) section of the documentation. Once the API Key is provided for one API, it will exist for the rest of the APIs.
+</Warning>
+
+![700](/images/docs/eedd0d9-api-key-authentication.png "api-key-authentication.png")
+
+3. In the Headers section, provide the `Profile Key`
+
+![2028](/images/docs/9eafa6d-Numbering-Headers.png "Numbering-Headers.png")
+
+4. Click on the `Try It` button to execute the API.
+
+* The API response will be the generated number.
+* Execute the API again and you will see the Number increment.
+
+Response 1:
+
+<CodeGroup>
+  ```text Response 1
+  1
+  ```
+</CodeGroup>
+
+Response 2:
+
+<CodeGroup>
+  ```text Response 2
+  2
+  ```
+</CodeGroup>
+
+***
+
+What’s Next
+
+* [Add a Prefix / Suffix To Your Numbering Process](/docs/add-a-prefix-suffix-to-your-numbering-process)

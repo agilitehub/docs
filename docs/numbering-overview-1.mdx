@@ -1,0 +1,64 @@
+---
+title: "Numbering Use Cases"
+description: "This section provides use cases/examples of the Numbering Module"
+---
+
+[Suggest Edits](/edit/numbering-overview-1)
+
+## **Use Case 1**
+
+  
+
+* Let's assume that I run a staffing company and I would like to assign users IDs for each of the jobs they have done/will do.
+
+  Then I can use the **Numbering Module** for this. I can dynamically pass the name of the waiter/staff member as well as the number of hours so that I can get an ID back that explains the job that was done.
+
+  For instance, I can make the `prefix` the initials of the waiter. So let's say we have a waiter with the initials `BFG` and this person has signed up for 3 jobs that require 5,6 and 10 hours of work respectively. Then I can assign the `suffix` dynamically with the number of hours.
+
+  Thus my first Job's ID would be `BFG15`. We could change the formatting slightly and add a `-` to the suffix as well as define the minimum length of the ID to 5. If I then set the profile to increment of the `prefix` then this would be the result for Jobs 1 through to 3:
+
+  Job no. 1 ID: `BFG00001-5` Job no. 2 ID: `BFG00002-6` Job no. 3 ID: `BFG00003-10`
+
+## **Use Case 2**
+
+  
+
+* Let's assume that I run a bus company and I need to assign route names, I would like these names to correspond to the person driving the bus as well as the area where the route is.
+
+  Thus I would configured a **Numbering** profile where I can dynamically pass Initials or Full Name as a `prefix` and then pass the area name as the `suffix`. We can then increment based on the `suffix` and we can set the minimum length to 3.
+
+  If we have 3 drivers with initials `BFG`,`JGM`,`PPM` and they all drive in the area of Johannesburg, where the `suffix` is set to an area code, in this case `JHB`. Then this would be the result for the route IDs for routes 1 through to 3:
+
+  Route 1 ID: `BFG001JHB` Route 2 ID: `JGM002JHB` Route 3 ID: `JGM003JHB`
+
+## **Use Case 3**
+
+  
+
+* Lets assume that I run a financial company where we need to actively send out and use hard copies of invoices, statements and receipts.
+
+  Here I can use the **Numbering Module** to help me label each of the incoming documents appropriately. Here I could use my `prefix` as an identifier for which type of document I am working with, and I can add onto the `suffix` the initials of the person that sent it in.
+
+  If we have 2 different types of documents, `INV` (an invoice) and `REC` (a receipt) and we have 2 different clients with initials `JHG` and `ATK`.
+
+  Then I can set up my profile with a minimum length of 4 and have the profile increment based on the `prefix`, and both of my clients file a receipt and an invoice, then the result of the profile will be:
+
+  1st Invoice Client 1: `INV0001JHG` 1st Invoice Client 2: `INV0002ATK` 1st Receipt Client 1: `REC0001JHG` 2nd Invoice Client 1: `INV0003JHG` 2nd Invoice Client 2: `INV0004ATK` 1st Receipt Client 2: `REC0002ATK`
+
+<Check>
+  These use cases/examples are here to show you **how the Numbering Module** can be used **within real world scenarios** as well as to **explain the different elements that exist** within the Module.
+</Check>
+
+***
+
+What’s Next
+
+* [Overview of Numbering Execution APIs](/docs/overview-of-numbering-execution-apis)
+
+Copy Page
+
+* [Table of Contents](#)
+
+* * [**Use Case 1**](#use-case-1-br-)
+  * [**Use Case 2**](#use-case-2-br-)
+  * [**Use Case 3**](#use-case-3-br-)

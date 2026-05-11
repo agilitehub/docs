@@ -1,0 +1,63 @@
+---
+title: "Increment Number Based On"
+description: "Suggest Edits"
+---
+
+## **Overview**
+
+The `Increment Number Based On` property instructs the Numbering API to only increment the number based on certain conditions. By default this is set to `None`, which means that the number will always increment upon request, but this value can be set to:
+
+* Prefix
+* Suffix
+* Both
+
+1. In the Agilit-e Admin Portal, in the Numbering module's section, open the `Leave Numbering` profile.
+
+![1232](/images/docs/38ee26d-Existing-Numbering.png "Existing-Numbering.png")
+
+2. Click on the Actions menu icon Numbering profile's title bar.
+
+![1524](/images/docs/c8d75a1-Reset-Numbering-Counters.png "Reset-Numbering-Counters.png")
+
+3. Click on the *Reset Numbering Counters* menu item.
+
+4. Change the *Increment Number Based On* property to *Prefix*
+
+![1578](/images/docs/3c0fd4b-Based-Prefix-Numbering.png "Based-Prefix-Numbering.png")
+
+5. Click "Submit" to save the Numbering Profile
+
+**Response with `LEAVE-` prefix**
+
+<CodeGroup>
+  ```text 200 OK
+  LEAVE-005-2018
+  ```
+</CodeGroup>
+
+**Response with a different prefix**
+
+<CodeGroup>
+  ```text 200 OK
+  LEAVE_REQ-005-2018
+  ```
+</CodeGroup>
+
+**Response with the Original prefix**
+
+<CodeGroup>
+  ```text 200 OK
+  LEAVE-006-2018
+  ```
+</CodeGroup>
+
+***
+
+What’s Next
+
+* [Keywords Overview](/docs/keywords-overview)
+
+Copy Page
+
+* [Table of Contents](#)
+* * [**Overview**](#overview)

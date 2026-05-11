@@ -1,0 +1,49 @@
+---
+title: "Admin Portal vs API Server"
+description: "This section helps you understand how the Agilit-e Admin Portal and API Server come together as a single solution"
+---
+
+[Suggest Edits](/edit/admin-portal-vs-api-server)
+
+## Overview
+
+Agilit-e, in its entirety, is made up of 2 [runtimes](https://en.wikipedia.org/wiki/Runtime_system):
+
+* [Admin Portal](https://portal.agilite.io/)
+* [API Server](/reference)
+
+## Agilit-e Admin Portal
+
+The Admin Portal provides a graphical user interface that allows a power user of Agilit-e to create and manage profiles for each of the modules. For the most part, the Admin Portal allows for [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) (Create/Read/Update/Delete).
+
+Let's say you want to use Agilit-e to generate unique numbers for your application. You would use the Admin Portal to configure a Numbering profile. Within the Admin Portal one can only Create/Read/Update/Delete. The Admin Portal serves as a place for you to setup the way in which you want the module to work and what you would like it to do upon execution. These modules are not executed within the Admin Portal, the Admin Portal simply offers an easy to use way of setting up modules and configuring them for the purposes that you intend to use them for.
+
+<Info>
+  See Also: [Admin Portal Fundamentals](/docs/admin-portal-fundamentals)
+</Info>
+
+## Agilit-e API Server
+
+The API Server is how your custom application or solution will interface with Agilit-e in order to obtain the required result, depending on which profile you configured and are requesting. The API Server allows for both [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) (Create/Read/Update/Delete) as well as [RESTful operations](https://en.wikipedia.org/wiki/Representational_state_transfer) (GET, PUT, POST, DELETE etc)
+
+Using the example above, if you configured a Numbering profile via the Admin Portal or via the API Server, you will call the Numbering API via the API Server in order to receive the generated unique number.
+
+With the exception of the Utility services, every other API call to Agilit-e will require a module profile to be configured. These configurations, as mentioned above, can be done via [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) (Create/Read/Update/Delete) in either the Admin Portal or the API Server. However, [RESTful operations](https://en.wikipedia.org/wiki/Representational_state_transfer) (GET, PUT, POST, DELETE etc) are unique to the API Server
+
+<Info>
+  See Also: [API Server Fundamentals](/docs/api-server-fundamentals)
+</Info>
+
+***
+
+What’s Next
+
+* [Admin Portal Fundamentals](/docs/admin-portal-fundamentals)
+
+Copy Page
+
+* [Table of Contents](#)
+
+* * [Overview](#overview)
+  * [Agilit-e Admin Portal](#agilit-e-admin-portal)
+  * [Agilit-e API Server](#agilit-e-api-server)

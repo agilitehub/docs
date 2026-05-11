@@ -1,126 +1,197 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "theme": "aspen",
+  "name": "e",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#d13135",
+    "light": "#d13135",
+    "dark": "#d13135"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/cbabcc8-small-Agilit-e_logo_Icon_Only_Web.png",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Docs",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Home",
+            "pages": ["docs/introduction-to-agilite", "docs/why-use-agilit-e", "docs/admin-portal-vs-api-server"]
+          },
+          {
+            "group": "Getting Started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "docs/admin-portal-fundamentals",
+              {
+                "group": "Admin Portal Fundamentals",
+                "pages": ["docs/admin-portal-fundamentals", "docs/overview-agilit-e-resources", "docs/overview-agilit-e-modules", "docs/mustache"]
+              },
+              {
+                "group": "User Registration and Sign In",
+                "pages": ["docs/user-registration-and-sign-in", "docs/register-new-account", "docs/signing-in-to-admin-portal"]
+              },
+              "docs/api-server-fundamentals",
+              "docs/obtaining-an-api-key-agilit-e-token"
             ]
           },
           {
-            "group": "Customization",
+            "group": "API Keys Module",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "docs/api-keys-overview",
+              {
+                "group": "API Keys Tutorial",
+                "pages": [
+                  "docs/api-keys-tutorial",
+                  "docs/access-agilit-e-api-keys-in-the-admin-portal",
+                  "docs/configure-your-first-api-profile",
+                  "docs/generate-your-first-api-key",
+                  "docs/disable-and-reset-your-api-key-profile"
+                ]
+              }
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Numbering Module",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/components",
-              "essentials/reusable-snippets"
+              "docs/numbering-overview",
+              "docs/numbering-overview-1",
+              "docs/overview-of-numbering-execution-apis",
+              {
+                "group": "Numbering Tutorial",
+                "pages": [
+                  "docs/numbering-tutorial",
+                  "docs/access-agilit-e-numbering",
+                  "docs/title",
+                  "docs/test-your-numbering-profile",
+                  "docs/add-a-prefix-suffix-to-your-numbering-process",
+                  "docs/configure-the-start-number-at-property",
+                  "docs/configure-the-minimum-length-property",
+                  "docs/increment-number-based-on-1"
+                ]
+              }
             ]
           },
           {
-            "group": "Agent ready",
+            "group": "Keywords Module",
             "pages": [
-              "agent-ready/prompt",
-              "agent-ready/visibility",
-              "agent-ready/contextual",
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
+              "docs/keywords-overview",
+              "docs/keywords-use-cases",
+              "docs/overview-of-keywords-execution-apis",
+              {
+                "group": "Keywords Tutorial",
+                "pages": [
+                  "docs/keywords-tutorial",
+                  "docs/access-agilit-e-keywords-admin-portal",
+                  "docs/configure-your-first-keywords-profile",
+                  "docs/test-your-keywords-profile"
+                ]
+              }
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Tier Structures Module",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "docs/tier-structures-overview",
+              "docs/tier-structures-use-cases",
+              "docs/overview-of-tier-structures-execution-apis",
+              {
+                "group": "Tier Structures Tutorial",
+                "pages": [
+                  "docs/tier-structures-tutorial",
+                  "docs/access-agilit-e-tier-structures-in-admin-portal",
+                  "docs/configure-your-first-tier-structure-profile",
+                  "docs/test-your-tier-structures-profile"
+                ]
+              }
             ]
+          },
+          {
+            "group": "Connectors Module",
+            "pages": [
+              "docs/connectors-overview",
+              "docs/connectors-use-cases",
+              "docs/overview-of-connecters-execution-apis",
+              "docs/connector-types-and-presets",
+              {
+                "group": "Connectors Tutorial",
+                "pages": [
+                  "docs/connectors-tutorial",
+                  "docs/obtain-a-openweathermap-api-key",
+                  "docs/access-agilit-e-connectors-in-admin-portal",
+                  "docs/configure-your-first-connector",
+                  "docs/test-your-connector-profile"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Data Mapping Module",
+            "pages": [
+              "docs/data-mapping-overview",
+              "docs/data-mapping-use-cases",
+              "docs/overview-of-data-mapping-execution-apis",
+              {
+                "group": "Data Mapping Tutorial",
+                "pages": [
+                  "docs/data-mapping-tutorial",
+                  "docs/access-agilit-e-data-mapping",
+                  "docs/configure-your-first-data-mapping-profile",
+                  "docs/execute-your-json-to-excel-data-mapping-profile",
+                  "docs/excel-to-json-data-mapping-profile",
+                  "docs/execute-your-excel-to-json-data-mapping-profile",
+                  "docs/json-to-json-data-mapping-profile",
+                  "docs/execute-your-json-to-json-data-mapping-profile"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Templates Module",
+            "pages": [
+              "docs/templates-overview",
+              "docs/templates-use-cases",
+              "docs/overview-of-templates-execution-apis",
+              {
+                "group": "Templates Tutorial",
+                "pages": [
+                  "docs/templates-tutorial",
+                  "docs/access-agilit-e-templates",
+                  "docs/configure-your-first-template",
+                  "docs/test-your-templates-profile"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Roles Module",
+            "pages": [
+              "docs/roles-overview",
+              "docs/overview-of-roles-execution-apis",
+              {
+                "group": "Roles Tutorial",
+                "pages": [
+                  "docs/roles-tutorial",
+                  "docs/access-agilit-e-roles-in-the-admin-portal",
+                  "docs/configure-your-first-roles-profile",
+                  "docs/test-your-roles-profile"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "BPM Module",
+            "pages": ["docs/bpm-overview"]
+          },
+          {
+            "group": "Utility Services",
+            "pages": ["docs/utility-services-overview", "docs/overview-of-the-utility-apis"]
+          },
+          {
+            "group": "Dashboard Reports",
+            "pages": ["docs/dashboards-overview"]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
-  }
+  "logo": "/images/45933ee-small-Agilit-e_logo_Full_Logo_Web.png"
 }

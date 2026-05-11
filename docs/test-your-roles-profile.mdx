@@ -1,0 +1,45 @@
+---
+title: "Test Your Roles Profile"
+description: "Suggest Edits"
+---
+
+Go to the [Agilit-e API Reference](/reference) page.
+
+1. Navigate to the Roles Execution APIs category under the Agilit-e Roles section, followed by clicking on the `/getRole` menu item.
+
+![490](/images/docs/556cf9f-Roles-GetRole.png "Roles-GetRole.png")
+
+2. Click on the user icon on the top right of the API logic and populate the generated Agilit-e token into the api-key field.
+
+<Warning>
+  **Note:** You will need to create an API Key, as mentioned earlier in the [API Keys Module](/docs/api-keys-overview) section of the documentation. Once the API Key is provided for one API, it will exist for the rest of the APIs.
+</Warning>
+
+![700](/images/docs/1344e56-api-key-authentication.png "api-key-authentication.png")
+
+3. In the Headers section provide the `Role Name` and the `Conditional Levels`: (i.e Manager of IT)
+
+![2036](/images/docs/018955d-Roles-Headers.png "Roles-Headers.png")
+
+4. Click on the Try It button to execute the API.
+
+* The Response Object will contain the Role ID and the Responsible User for that Role
+
+<CodeGroup>
+  ```json 200 OK
+  {
+    "roleIds": [
+    	"5bc03021d0c7f200770eb2ae"
+    ],
+    "responsibleUsers": [
+    	"John Doe"
+    ]
+  }
+  ```
+</CodeGroup>
+
+***
+
+What’s Next
+
+* [BPM Overview](/docs/bpm-overview)

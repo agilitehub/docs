@@ -1,0 +1,89 @@
+---
+title: "API Server Fundamentals"
+description: "This section explains how to interface with Agilit-e's API Server"
+---
+
+[Suggest Edits](/edit/api-server-fundamentals)
+
+## Overview
+
+The URL address for interfacing with the Agilit-e API Server is: [https://api.agilite.io](https://api.agilite.io).
+
+<Warning>
+  In nearly every case, the URL for accessing the Agilit-e API Server on-premise would be one of the following addresses:
+
+  * localhost:6010
+  * 127.0.0.1:6010
+  * custom-ip-address:6010
+
+  For containerized environments, the url will be based on the IP address and port assigned to the Agilit-e API Server container.
+</Warning>
+
+## API Key (Header Parameter)
+
+For every API call made to the Agilit-e API Server, a API Key (aka Agilit-e token) is required in the header of the API request. The header parameter to hold the token is called `api-key`. Below is an example of this:
+
+<CodeGroup>
+  ```curl Get Keywords
+  curl --request GET \
+    --url https://api.agilite.io/keywords/data \
+    --header 'api-key: agilite_token'
+  ```
+</CodeGroup>
+
+<Warning>
+  **Note:** You will need to create an API Key in the [API Keys Module](/docs/api-keys-overview) via the Agilit-e Admin Portal. It is important that this is setup, as the API Key uniquely identifies your Agilit-e Account and tells the [Agilit-e API Reference](/v5/reference) page that you are a part of Agilit-e. Once the API Key is provided for one API, it will exist for the rest This will be covered next, in the [Obtaining an API Key (Agilit-e Token)](/docs/obtaining-an-api-key-agilit-e-token) section.
+</Warning>
+
+## API Response Schema
+
+For every API request (when the response is not an Array Buffer object - e.g. [/files](/reference/files-1) or [/generatePDF](/reference/generatepdf)), the default response is always JSON that has the following properties:
+
+* success (boolean) - Used to determine if the API transaction was successful or not
+* messages (array) - Holds 1 or more error descriptions if `success = false`
+* data (mixed object) - Holds the actual data returned from the API request
+
+Below is an example of this:
+
+<CodeGroup>
+  ```json API Response Schema
+  {
+    "success": true,
+    "messages": [],
+    "data": {}
+  }
+  ```
+</CodeGroup>
+
+## Data Only (Header Parameter)
+
+There is a header parameter that can be used for every API request to Agilit-e called `data-only`. This parameter affects how the API request returns the JSON response. `data-only` is an optional parameter and is assumed `false` by default. If this parameter is set to `true`, the default API response schema will be modified to only return the actual data, and not the response headers. See below example of both:
+
+<CodeGroup>
+  ```json data-only = false
+  {
+    "success": true,
+    "messages": [],
+    "data": {"param":"value"}
+  }
+  ```
+
+  ```json data-only=true
+  {"param":"value"}
+  ```
+</CodeGroup>
+
+***
+
+What’s Next
+
+* [Obtaining an API Key (Agilit-e Token)](/docs/obtaining-an-api-key-agilit-e-token)
+
+Copy Page
+
+* [Table of Contents](#)
+
+* * [Overview](#overview)
+  * [API Key (Header Parameter)](#api-key-header-parameter)
+  * [API Response Schema](#api-response-schema)
+  * [Data Only (Header Parameter)](#data-only-header-parameter)

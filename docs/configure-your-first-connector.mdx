@@ -1,0 +1,51 @@
+---
+title: "Configure Your First Connector"
+description: "In this section you will learn how to create a Connectors profile"
+---
+
+[Suggest Edits](/edit/configure-your-first-connector)
+
+In the following example, we will create a Connector to fetch the *current weather* for *Chicago, Illinois* using OpenWeatherMap.
+
+1. Create a new Connector profile using the Create New button.
+
+![790](/images/docs/add9ddf-Create-New-Connectors.png "Create-New-Connectors.png")
+
+2. Populate the Connectors profile: *General Tab*
+
+* Profile Key: weather\_service
+* Connection Name: Weather Service
+* Connection Type: Web API
+
+![2572](/images/docs/b274aac-Connectors-General.png "Connectors-General.png")
+
+*API Configuration Tab*
+
+* Web API Base URL: [https://api.openweathermap.org](https://api.openweathermap.org)
+* URL Parameters `Key`: appid `Value`: *Your OpenWeatherMap API Key*
+
+![1892](/images/docs/e542d23-Connectors-API-Config.png "Connectors-API-Config.png")
+
+*Routes Tab* Click on the `Routes` tab and click on the `Create New` button to open a new Route Profile.
+
+![1034](/images/docs/fe1b82d-Connectors-Routes-Create-New.png "Connectors-Routes-Create-New.png")
+
+* Route Key: current\_weather\_chicago
+* Route Name: Current Weather Chicago
+
+![860](/images/docs/f7863e8-Connectors-Routes-General.png "Connectors-Routes-General.png")
+
+* Request Type: GET
+* Web API Route URL: /data/2.5/weather
+* Query Parameters `Key`: q `Value`: Chicago,Illinois
+
+![1554](/images/docs/fb66c2f-Connectors-Route-Info.png "Connectors-Route-Info.png")
+
+3. Click on "Ok" to save and close the Route Profile.
+4. Click on "Submit" to save the Connectors Profile.
+
+***
+
+What’s Next
+
+* [Test Your Connector Profile](/docs/test-your-connector-profile)

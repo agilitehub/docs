@@ -1,0 +1,76 @@
+---
+title: "Mustache Tags"
+description: "This topic explains what Mustache is and how to make use of it in the Admin Portal"
+---
+
+[Suggest Edits](/edit/mustache)
+
+## **Overview**
+
+[Mustache](http://mustache.github.io) is a library that allows for the creation of logic-less templates using tags. This provides powerful dynamic capability when profiling in the Agilit-e Admin Portal.
+
+In short, `mustache` can be used to replace static values in fields with dynamic values that are passed as a JSON body via the triggered Agilit-e API.
+
+The below tutorial demonstrates `mustache` in action with an Agilit-e Numbering process:
+
+1. Access [Agilit-e Admin Portal](https://portal.agilite.io)
+
+2. Navigate to the Numbering Module
+
+![2534](/images/docs/1b83477-Screen_Shot_2018-10-01_at_05.11.00.png "Screen Shot 2018-10-01 at 05.11.00.png")
+
+3. Use the [Numbering Tutorial](/docs/numbering-tutorial) to configure a Numbering profile.
+
+4. Edit the existing numbering profile.
+
+![1066](/images/docs/10c68b2-Screen_Shot_2018-10-12_at_13.36.57.png "Screen Shot 2018-10-12 at 13.36.57.png")
+
+5. Inside any Agilit-e profile, fields with labels that contain the text `{{m}}` are **mustache-enabled** fields. The below example shows that the `Prefix` and `Suffix` fields in the Numbering profile are **mustache-enabled**.
+
+![2554](/images/docs/30bface-Screen_Shot_2018-10-12_at_15.09.04.png "Screen Shot 2018-10-12 at 15.09.04.png")
+
+6. Replace the two static values with dynamic Mustache parameter values, the API Reference docs sends two parameters via the body of the request called *param1* and *param2*, these parameter values can be accessed by providing the parameter names inside the Mustache enabled fields.
+
+![2554](/images/docs/95ab62e-Screen_Shot_2018-10-12_at_15.10.37.png "Screen Shot 2018-10-12 at 15.10.37.png")
+
+7. Click on "Submit" to save the Numbering profile.
+
+8. Using the Agilit-e API Reference Documentation
+
+* Navigate to the [Agilit-e API Reference](/v5/reference) page.
+* Authenticate with Agilit-e by providing your e-mail and password credentials and clicking on the "Try It" button.
+* Once authenticated, the API response will include your user information as well as an Agilit-e token
+* Copy the Agilit-e token as it will be required for executing the Numbering APIs.
+
+9. Navigate to the *Agilit-e Numbering Execution APIs* and add Prefix and Suffix values to the param1 and param2 fields, these values will be passed in the body of the request.
+
+![2062](/images/docs/e7dafe4-Screen_Shot_2018-10-12_at_15.19.40.png "Screen Shot 2018-10-12 at 15.19.40.png")
+
+10. Click on the user icon on the top right of the API logic and populate the Agilit-e token into the `api-key` field.
+
+<Warning>
+  **Note:** You will need to create an API Key in the [API Keys Module](/docs/api-keys-overview). It is important that this is setup, as the API Key uniquely identifies your Agilit-e Account and tells the [Agilit-e API Reference](/v5/reference) page that you are a part of Agilit-e. Once the API Key is provided for one API, it will exist for the rest of the APIs. This will also be covered later on in our documentation, in the [Obtaining an API Key (Agilit-e Token)](/docs/obtaining-an-api-key-agilit-e-token) section.
+</Warning>
+
+![820](/images/docs/74a00c7-Screen_Shot_2018-10-12_at_07.21.35.png "Screen Shot 2018-10-12 at 07.21.35.png")
+
+11. Execute the API by clicking on the red `Try It` button on the top right
+
+* Response: The Prefix and Suffix values were passed to the Agilit-e Admin Portal and appended to the number
+
+<CodeGroup>
+  ```json 200 OK
+  {
+    "success": true,
+    "messages": [],
+    "data": "LEAVE-005-2018"
+  }
+  ```
+</CodeGroup>
+
+***
+
+Copy Page
+
+* [Table of Contents](#)
+* * [**Overview**](#overview)

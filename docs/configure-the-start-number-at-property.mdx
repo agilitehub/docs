@@ -1,0 +1,49 @@
+---
+title: "Configure The Start Number At Property"
+description: "Suggest Edits"
+---
+
+## **Overview**
+
+The `Start At` property instructs the Numbering API on where the Numbering counter should start for a newly created Numbering profile. Example: If the `Start At` property is set to 5, the Numbering Execution API will start generating numbers from 5 and not 1.
+
+Below is a tutorial on how to configure this:
+
+1. In the Agilit-e Admin Portal, in the Numbering module's section, open the `Leave Numbering` profile.
+
+![1232](/images/docs/3211c1c-Existing-Numbering.png "Existing-Numbering.png")
+
+2. Click on the Actions menu icon Numbering profile's title bar.
+
+![1524](/images/docs/1338617-Reset-Numbering-Counters.png "Reset-Numbering-Counters.png")
+
+3. Click on the *Reset Numbering Counters* menu item.
+
+4. Set the value of the *Start Number At* property to 5
+
+![1566](/images/docs/7b779c0-Start-Number-At-Numbering.png "Start-Number-At-Numbering.png")
+
+5. Click on `Submit` to save the Numbering Profile.
+
+6. Navigate to the [Agilit-e API Reference Docs](/v5/reference) and execute the Numbering API
+
+The Response Data will contain the newly generated number starting at 5 which is now the default starting point.
+
+**Response:**
+
+<CodeGroup>
+  ```text 200 OK
+  LEAVE-5-2018
+  ```
+</CodeGroup>
+
+***
+
+What’s Next
+
+* [Configure The Minimum Length Property](/docs/configure-the-minimum-length-property)
+
+Copy Page
+
+* [Table of Contents](#)
+* * [**Overview**](#overview)

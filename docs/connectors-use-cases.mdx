@@ -1,0 +1,54 @@
+---
+title: "Connectors Use Cases"
+description: "This section provides use cases/examples of the Connectors Module"
+---
+
+[Suggest Edits](/edit/connectors-use-cases)
+
+## **Use Case 1**
+
+  
+
+* Let's assume that I own a staffing company and wish to save waiter data in a database (on Agilit-e). I can do this using the **Connectors Module**. I would configure a profile and set the `Connection Type` in the `General` tab of the profile to `MongoDB (Mongoose)`.
+
+  I would then define the schema that I wish to implement, then on the `API Configuration` tab I would set the `Connection Type` value to Agilit-e. This means that Agilit-e will save my data for me. Hereafter I will setup a few routes that do specific queries such as Update, Create, Delete etc.
+
+  These routes are then setup so that when I execute the **Connectors** profile I don't need to send too much information, I simply need to pass through a small amount of my waiter data that I would like Saved, Deleted, Updated etc.
+
+## **Use Case 2**
+
+  
+
+* Let's assume that I own a transportation company and my drivers need to be made aware of the weather at all times. I can do this very easily with the **Connectors Module**.
+
+  I would configure a profile and set the `Connection Type` in the `General` tab of the profile to `-Web API-`. This will allow me to create routes to the different features that the Weather API (of my choice) provides.
+
+  I can then easily configure the profile in such a way so that I don't need to pass all the data every time, but rather very small amounts of data that would save me quite a bit long term as I won't need every person to send all the data all the time, instead alot of it is already configured.
+
+## **Use Case 3**
+
+  
+
+* Let's assume that I own a financial company and that we have our own servers at a secure location, however we would like to make the process of interacting with the server more secure and would like to send the least amount of data possible when users are using the APIs via our app.
+
+  I would be able to do this easily in the **Connectors Module**. I would configure a profile and set the `Connection Type` in the `General` tab of the profile to `Microsoft SQL`. I would the fill in all of the server configuration settings in the `API Configuration` tab in the profile.
+
+  I would then configure the routes so that they can perform different actions within the server. This is alot safer as the **Connectors Module** basically plays a middle-man role where it makes everything more secure and limits the amount of data that is sent.
+
+<Check>
+  These use cases/examples are here to show you **how the Connectors Module** can be used **within real world scenarios** as well as to **explain the different elements that exist** within the Module.
+</Check>
+
+***
+
+What’s Next
+
+* [Overview of Connecters Execution APIs](/docs/overview-of-connecters-execution-apis)
+
+Copy Page
+
+* [Table of Contents](#)
+
+* * [**Use Case 1**](#use-case-1-br-)
+  * [**Use Case 2**](#use-case-2-br-)
+  * [**Use Case 3**](#use-case-3-br-)

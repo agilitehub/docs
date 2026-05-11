@@ -1,0 +1,80 @@
+---
+title: "Test Your Tier Structures Profile"
+description: "Interact with your Tier Structures profile using Agilit-e APIs"
+---
+
+[Suggest Edits](/edit/test-your-tier-structures-profile)
+
+## Test using /getTierByKey
+
+Go to the [Agilit-e API Reference](/reference) page.
+
+1. Navigate to the Tier Structures Execution APIs category under the Agilit-e Tier Structures section, followed by clicking on the `/getTierByKey` menu item.
+
+![276](/images/docs/8ab061e-getTierByKey_tier_structures.PNG "getTierByKey_tier_structures.PNG")
+
+2. Click on the user icon on the top right of the API logic and populate your generated Agilit-e token into the `api-key` field.
+
+<Warning>
+  **Note:** You will need to create an API Key, as mentioned earlier in the [API Keys Module](/docs/api-keys-overview) section of the documentation. Once the API Key is provided for one API, it will exist for the rest of the APIs.
+</Warning>
+
+![700](/images/docs/4a835da-api-key-authentication.png "api-key-authentication.png")
+
+3. Under the Headers section, provide the `tier-keys` that you would like included.
+
+* Under tier-keys you can add multiple tiers or only one. you can do this by separating the values with commas. For example `country,states` or `states` or `country` will all return results.
+* The `include-values` , `include-meta-data`, `include-tier-entries`, `sort-values`, and `values-output-format` are all fields that you can specify, all giving more or less information depending on if they are on or not.
+
+![1241](/images/docs/e0fa6d4-tier_structures_headers.PNG "tier_structures_headers.PNG")
+
+4. Click on the `Try It` button to execute the API.
+
+* The API response will contain the `country` tiers that were configured in the Tier Structures profile.
+
+<CodeGroup>
+  ```json json
+  {
+      "values": [{
+          "label": "United States of America",
+          "value": "USA"
+      }],
+      "tierEntries": [{
+          "_id": "1304c810-7e2d-11ea-b5d9-274a913ea02c",
+          "isActive": true,
+          "key": "states",
+          "description": "",
+          "notes": "",
+          "values": [{
+                  "label": "Montana",
+                  "value": "MT"
+              },
+              {
+                  "label": "New York",
+                  "value": "NY"
+              },
+              {
+                  "label": "Washington",
+                  "value": "WA"
+              }
+          ],
+          "tierEntries": []
+      }],
+      "isActive": true,
+      "key": "country",
+      "description": "",
+      "notes": ""
+  }
+  ```
+</CodeGroup>
+
+***
+
+What’s Next
+
+* [Connectors Overview](/docs/connectors-overview)
+
+Copy Page
+
+* [Table of Contents](#)
+* * [Test using /getTierByKey](#test-using-gettierbykey)

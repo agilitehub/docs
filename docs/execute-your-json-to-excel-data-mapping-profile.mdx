@@ -1,0 +1,61 @@
+---
+title: "Execute Your JSON to Excel Data Mapping Profile"
+description: "In this section you will execute your JSON to Excel Data Mapping Profile"
+---
+
+[Suggest Edits](/edit/execute-your-json-to-excel-data-mapping-profile)
+
+1. Using Postman provide the following headers in your request
+
+* api-key - Unique Agilit-e Generated API Key
+* profile-key - json2excel (Profile Key of the Data Mapping Profile)
+* Content-Type: application/json
+
+<Warning>
+  **Note:** You will need to create an API Key, as mentioned earlier in the [API Keys Module](/docs/api-keys-overview) section of the documentation. Once the API Key is provided for one API, it will exist for the rest of the APIs.
+</Warning>
+
+![2244](/images/docs/519a420-json2excel_headers.png "json2excel_headers.png")
+
+2. Provide the body data/JSON that will be used in the Data Mapping Profile
+
+![1312](/images/docs/2432a45-json2excel_body.png "json2excel_body.png")
+
+3. Click on the "Send" button to execute the Data Mapping Profile
+
+![636](/images/docs/394a573-Send_button_postman.png "Send_button_postman.png")
+
+## Response
+
+The response will contain the following meta data.
+
+<CodeGroup>
+  ```json json
+  {
+      "_id": "id",
+      "createdBy": "user",
+      "modifiedBy": "user",
+      "data": {
+          "fileName": "firstExcel.xlsx",
+          "parentId": "",
+          "contentType": "application/octet-stream"
+      },
+      "createdAt": "",
+      "updatedAt": "",
+      "__v": 0
+  }
+  ```
+</CodeGroup>
+
+The *\_id* will be a unique number, copy and save the *\_id* as you will need it later on.
+
+***
+
+What’s Next
+
+* [Excel to JSON Data Mapping Profile](/docs/excel-to-json-data-mapping-profile)
+
+Copy Page
+
+* [Table of Contents](#)
+* * [Response](#response)

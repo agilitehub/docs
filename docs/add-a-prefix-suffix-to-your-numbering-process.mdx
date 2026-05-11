@@ -1,0 +1,51 @@
+---
+title: "Add a Prefix / Suffix To Your Numbering Process"
+description: "Suggest Edits"
+---
+
+## **Overview**
+
+In many scenarios, generated numbers require a prefix or suffix, or in some cases, both. An example of this is a Purchase Order number. Instead of the number just being `001`, the requirement might be that the number is prefixed with the first 3 characters off a supplier's name...e.g. `AMA001`. Another example is if the number is suffixed with the current year...e.g. `AMA001-2018`.
+
+The Numbering modules allows for static and dynamic prefixes and suffixes to be configured. The tutorial below shows how this is done:
+
+<Info>
+  **Note:** Dynamic prefixes and suffixes need to be assigned in the Numbering Profile via the [Agilit-e Admin Portal](https://portal.agilite.io), using [Mustache.js](http://mustache.github.io) in order to assign them dynamic values (ie values that you pass to the API Call). You can also go over the [Mustache Tags](/docs/mustache) section again to fully understand how they are implemented.
+</Info>
+
+1. In the Agilit-e Admin Portal, in the Numbering module's section, open the `Leave Numbering` profile.
+
+![1232](/images/docs/67752c7-Existing-Numbering.png "Existing-Numbering.png")
+
+2. Click on the Actions menu icon Numbering profile's title bar.
+
+![1524](/images/docs/7ade39e-Reset-Numbering-Counters.png "Reset-Numbering-Counters.png")
+
+3. Click on the `Reset Numbering Counters` menu item. This resets the number back to 0.
+
+![1250](/images/docs/44ad024-Reset-Numbering-Item.png "Reset-Numbering-Item.png")
+
+4. Set the Prefix field to a value of `LEAVE-` and the Suffix field to `-2019`.
+
+![1596](/images/docs/55e6bab-Prefix-Suffix-Numbering.png "Prefix-Suffix-Numbering.png")
+
+5. Click on `Submit` to save the Numbering Profile.
+
+6. Navigate to the [Agilit-e API Reference Docs](/v5/reference) and execute the Numbering API. Below is an example of a number with a prefix and suffix.
+
+<CodeGroup>
+  ```text 200 OK
+  LEAVE-1-2019
+  ```
+</CodeGroup>
+
+***
+
+What’s Next
+
+* [Configure The Start Number At Property](/docs/configure-the-start-number-at-property)
+
+Copy Page
+
+* [Table of Contents](#)
+* * [**Overview**](#overview)

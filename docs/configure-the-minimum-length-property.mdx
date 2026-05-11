@@ -1,0 +1,49 @@
+---
+title: "Configure The Minimum Length Property"
+description: "Suggest Edits"
+---
+
+## **Overview**
+
+The `Minimum length of Number` property instructs the Numbering API to prefix the generated number with zeros based on the value provided. Example: If the would-be generated number is `5` and the minimum length value is `3`, the generated number would be `005`. If the would-be generated number is `10` and the minimum length value is `3`, the generated number would be `010`.
+
+Below is a tutorial on how to configure this:
+
+1. In the Agilit-e Admin Portal, in the Numbering module's section, open the `Leave Numbering` profile.
+
+![1232](/images/docs/92bfc95-Existing-Numbering.png "Existing-Numbering.png")
+
+2. Click on the Actions menu icon Numbering profile's title bar.
+
+![1524](/images/docs/4df7aa8-Reset-Numbering-Counters.png "Reset-Numbering-Counters.png")
+
+3. Click on the *Reset Numbering Counters* menu item.
+
+4. Edit the *Minimum Length* property, set the value to "3"
+
+![1564](/images/docs/00813f8-Min-Length-Numbering.png "Min-Length-Numbering.png")
+
+5. Click on `Submit` to save the Numbering Profile.
+
+6. Navigate to the [Agilit-e API Reference Docs](/v5/reference) and execute the Numbering API
+
+The Response Data will contain a newly generated number with a prefix and suffix, starting at 5 with the minimum length of 3.
+
+**Response:**
+
+<CodeGroup>
+  ```text 200 OK
+  LEAVE-005-2018
+  ```
+</CodeGroup>
+
+***
+
+What’s Next
+
+* [Increment Number Based On](/docs/increment-number-based-on-1)
+
+Copy Page
+
+* [Table of Contents](#)
+* * [**Overview**](#overview)

@@ -1,0 +1,62 @@
+---
+title: "Excel to JSON Data Mapping Profile"
+description: "In this section you will learn how to create a Data Mapping profile that maps over a Excel Spreadsheet and populates a JSON Object"
+---
+
+[Suggest Edits](/edit/excel-to-json-data-mapping-profile)
+
+1. Create a new Data Mapping profile using the Create New button.
+
+![826](/images/docs/e2c8973-Data-Mapping-Create-New.png "Data-Mapping-Create-New.png")
+
+2. Populate the Data Mapping profile: *General Tab*
+
+* Profile Key: excel2json
+* Profile Name: Excel To JSON
+* Source Type: Excel
+* Destination Type: JSON
+
+![2826](/images/docs/69e64e2-Data_Mapping_ExcelToJSON_Form.png "Data_Mapping_ExcelToJSON_Form.png")
+
+3. In the Source Details Tab specify the *File Id* of the Excel Spreadsheet. Use the *\_id* you copied in the previous tutorial because that is the Excel File you will be using to read from.
+
+![1694](/images/docs/5be6756-Data_Mapping_Source_Excel.png "Data_Mapping_Source_Excel.png")
+
+4. In the Destination Details Tab select the Output Type as *Create JSON Object*
+
+![1658](/images/docs/704ddf7-Data_Mapping_Destination_JSON.png "Data_Mapping_Destination_JSON.png")
+
+5. Navigate to the Field Mappings Tab and Create a new Field Mapping by clicking on the `Create New` button.
+
+Field Mappings will contain the configuration of each cell you want to iterate/map over in the relevant Excel Spreadsheet.
+
+![2354](/images/docs/e57da14-Data_Mapping_New_Field_Mapping.png "Data_Mapping_New_Field_Mapping.png")
+
+6. Populate the Field Mapping Form
+
+General Details
+
+* Mapping Name: *username*
+
+Source Details
+
+* Excel Worksheet Name: *worksheet1* (Name of the worksheet)
+* Cell Name: *A1* (The Cell you want to read from in the Excel Spreadsheet)
+
+Destination Details
+
+* Attribute Name: *username* (Property in JSON Object)
+
+![1990](/images/docs/a17f42b-Data_Mapping_ExcelToJSON_FieldMapping.png "Data_Mapping_ExcelToJSON_FieldMapping.png")
+
+7. Click on the "Ok" button to save the Mapping Profile.
+
+![2462](/images/docs/7d34f99-Data_Mapping_Field_Mapping_ExcelToJSON.png "Data_Mapping_Field_Mapping_ExcelToJSON.png")
+
+8. Click the "Submit" button to save and close the Data Mapping Profile.
+
+***
+
+What’s Next
+
+* [Execute Your Excel to JSON Data Mapping Profile](/docs/execute-your-excel-to-json-data-mapping-profile)

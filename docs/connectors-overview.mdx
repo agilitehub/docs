@@ -1,0 +1,58 @@
+---
+title: "Overview"
+description: "This section provides an overview of the Connectors Module"
+---
+
+[Suggest Edits](/edit/connectors-overview)
+
+Connectors is a module that allows for the creation and management of API profiles for various 3rd party applications and services, whether on-premise or in the cloud. In short, Connectors allows one to easily interface with 3rd party services, either via Web APIs (HTTP Requests) or directly (e.g. SQL Database Executions)
+
+**With Connectors, you could easily:**
+
+* Connect to an online weather service
+* Execute SQL queries against a relational database
+* Send mail via SMTP
+* Connect to a custom application's API running on your network or in the cloud
+
+The options are endless.
+
+## Connector Profiles and Routes
+
+Connectors are made up of 2 configurations:
+
+* Connector Profiles
+* Connector Routes
+
+A Connector Profile could have one or more Routes. If we use an online weather service (e.g. [OpenWeatherMap](http://openweathermap.org)), you would create a Connector profile that contains the core information about the online weather service and Routes for each of the web services the online service offers. Below are some examples that explain this relationship:
+
+**Example 1 - Online Weather Service**
+
+* I create a Connector Profile that contains basic information about the weather service including my credentials and tokens
+
+* Routes
+
+  * I create a Route that provides me with a 1 day forecast for a specific location
+  * I create a Route that provides me with a 3 day forecast for the same location
+  * I create a Route that provides me with a current forecast of a different location
+
+**Example 2 - SQL DB**
+
+* I create a Connector Profile that contains basic information about the relational database including my credentials
+
+* Routes
+
+  * I create a Route that allows me to run a SQL Query
+  * I create a Route that allows me to run an SQL Insert Statement
+
+To summarise, a Connector Profile is what the service is and the Routes are what you can do with the service.
+
+***
+
+What’s Next
+
+* [Connectors Use Cases](/docs/connectors-use-cases)
+
+Copy Page
+
+* [Table of Contents](#)
+* * [Connector Profiles and Routes](#connector-profiles-and-routes)

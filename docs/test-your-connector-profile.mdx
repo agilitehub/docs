@@ -1,0 +1,82 @@
+---
+title: "Test Your Connector Profile"
+description: "Interact with your Connector profile via Agilit-e API Server"
+---
+
+[Suggest Edits](/edit/test-your-connector-profile)
+
+Go to the [Agilit-e API Reference](/reference) page.
+
+1. Navigate to the Connectors Execution APIs category under the Agilit-e Connectors section, followed by clicking on the `/execute` menu item.
+
+![502](/images/docs/bed9fb8-Connectors-Execute.png "Connectors-Execute.png")
+
+2. Click on the user icon on the top right of the API logic and populate the generated Agilit-e token into the `api-key` field.
+
+<Warning>
+  **Note:** You will need to create an API Key, as mentioned earlier in the [API Keys Module](/docs/api-keys-overview) section of the documentation. Once the API Key is provided for one API, it will exist for the rest of the APIs.
+</Warning>
+
+![700](/images/docs/16daddc-api-key-authentication.png "api-key-authentication.png")
+
+3. In the Headers section, provide the `Profile Key` and `Route Key`.
+
+![2042](/images/docs/01c1c1e-Connectors-Headers.png "Connectors-Headers.png")
+
+4. Click on the `Try It` button to execute the API.
+
+* The API response will contain a Object, which holds the Weather Data.
+
+<CodeGroup>
+  ```json json
+  {
+      "coord": {
+          "lon": -87.62,
+          "lat": 41.88
+      },
+      "weather": [
+          {
+              "id": 800,
+              "main": "Clear",
+              "description": "clear sky",
+              "icon": "01n"
+          }
+      ],
+      "base": "stations",
+      "main": {
+          "temp": 292.42,
+          "pressure": 1017,
+          "humidity": 59,
+          "temp_min": 290.15,
+          "temp_max": 294.82
+      },
+      "visibility": 16093,
+      "wind": {
+          "speed": 3.1,
+          "deg": 190
+      },
+      "clouds": {
+          "all": 1
+      },
+      "dt": 1560320866,
+      "sys": {
+          "type": 1,
+          "id": 4505,
+          "message": 0.01,
+          "country": "US",
+          "sunrise": 1560334497,
+          "sunset": 1560389150
+      },
+      "timezone": -18000,
+      "id": 4887398,
+      "name": "Chicago",
+      "cod": 200
+  }
+  ```
+</CodeGroup>
+
+***
+
+What’s Next
+
+* [Data Mapping Overview](/docs/data-mapping-overview)

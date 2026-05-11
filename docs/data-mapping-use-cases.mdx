@@ -1,0 +1,54 @@
+---
+title: "Data Mapping Use Cases"
+description: "This section provides use cases/examples of the Data Mapping Module"
+---
+
+[Suggest Edits](/edit/data-mapping-use-cases)
+
+## **Use Case 1**
+
+  
+
+* Let's assume that I run a staffing company and I want to assign Waiter IDs to Table IDs, however I would like to put this in a readable format so that I can easily link the Waiters to an Excel sheet that has all of the information that they will need for the night.
+
+  Here I can configure a **Data Mapping** profile to help me. I would set up a `JSON to Excel` profile that can be sent data dynamically that will be assigned to certain cells within the Excel sheet.
+
+  That way I would just need to make an API call from within my app to the **Data Mapping** profile every time a waiter would like to view their Table ID or other relevant information.
+
+## **Use Case 2**
+
+  
+
+* Let's assume that I own a transportation company, at said company I do predictive modelling. I could use the **Data Mapping Module** to setup an `Excel to JSON` configuration and use that to translate the modelling data that I have in Excel into JSON so that I can send that along for someone else to use.
+
+  This would make my life alot easier, because instead of having to pass along an Excel via the cloud (or a hard drive), then have the other person convert it. I can setup a profile that will convert it for me, as well as put the data in a format that is easy to send and secure.
+
+## **Use Case 3**
+
+  
+
+* Let's assume that I own an insurance company, and at this company we need to make use of alot of integration with other companies, as well as lots of different reports.
+
+  If I wanted to create an overarching report that contained information from an API integration as well as from an Excel report, then I could make use of the **Data Mapping Module**. I would create a `JSON to JSON` Data Mapping profile that would extract the relevant information from the response that I received from my API call.
+
+  I would then create an `Excel to Excel` profile to extract the relevant information from the report. I would then create an `Excel to JSON` profile, as well as a `JSON to Excel` profile. The former would be used to convert the relevant report data into a JSON object, which I can then attach to my first `JSON to JSON` profile response data (ie the relevant information I got the from the API call).
+
+  Then I would use the latter (`JSON to Excel` profile) to take the overall JSON object which now contains the API call information as well as the report Information and convert this into an Excel spreadsheet. Thus creating a Summary Report that contains different information sources.
+
+<Check>
+  These use cases/examples are here to show you **how the Data Mapping Module** can be used **within real world scenarios** as well as to **explain the different elements that exist** within the Module.
+</Check>
+
+***
+
+What’s Next
+
+* [Overview of Data Mapping Execution APIs](/docs/overview-of-data-mapping-execution-apis)
+
+Copy Page
+
+* [Table of Contents](#)
+
+* * [**Use Case 1**](#use-case-1-br-)
+  * [**Use Case 2**](#use-case-2-br-)
+  * [**Use Case 3**](#use-case-3-br-)

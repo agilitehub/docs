@@ -1,0 +1,49 @@
+---
+title: "Execute Your JSON to JSON Data Mapping Profile"
+description: "In this section you will execute your JSON to JSON Data Mapping Profile"
+---
+
+[Suggest Edits](/edit/execute-your-json-to-json-data-mapping-profile)
+
+1. Using Postman provide the following headers in your request
+
+* api-key - Unique Agilit-e Generated API Key
+* profile-key - json2json (Profile Key of the Data Mapping Profile)
+* Content-Type: application/json
+
+<Warning>
+  **Note:** You will need to create an API Key, as mentioned earlier in the [API Keys Module](/docs/api-keys-overview) section of the documentation. Once the API Key is provided for one API, it will exist for the rest of the APIs.
+</Warning>
+
+![2254](/images/docs/3689b15-json2json_headers.png "json2json_headers.png")
+
+2. Provide the following body data that will be used by the Data Mapping Profile and refactored accordingly
+
+![1340](/images/docs/c968e03-json2json_body.png "json2json_body.png")
+
+3. Click on the "Send" button to execute the Data Mapping Profile
+
+![636](/images/docs/394a573-Send_button_postman.png "Send_button_postman.png")
+
+## Response
+
+The response will contain the following data. The Data Mapping Profile read from the body JSON Object and refactored it into a new JSON Object.
+
+<CodeGroup>
+  ```json json
+  {
+      "firstName": "John Doe"
+  }
+  ```
+</CodeGroup>
+
+***
+
+What’s Next
+
+* [Templates Overview](/docs/templates-overview)
+
+Copy Page
+
+* [Table of Contents](#)
+* * [Response](#response)

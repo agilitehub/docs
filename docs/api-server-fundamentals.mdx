@@ -3,7 +3,7 @@ title: "API Server Fundamentals"
 description: "This section explains how to interface with Agilit-e's API Server"
 ---
 
-[Suggest Edits](/edit/api-server-fundamentals)
+{/* NOTE: Links to the legacy /reference API hub were removed because no replacement page exists in this site yet. */}
 
 ## Overview
 
@@ -32,12 +32,12 @@ For every API call made to the Agilit-e API Server, a API Key (aka Agilit-e toke
 </CodeGroup>
 
 <Warning>
-  **Note:** You will need to create an API Key in the [API Keys Module](/docs/api-keys-overview) via the Agilit-e Admin Portal. It is important that this is setup, as the API Key uniquely identifies your Agilit-e Account and tells the [Agilit-e API Reference](/v5/reference) page that you are a part of Agilit-e. Once the API Key is provided for one API, it will exist for the rest This will be covered next, in the [Obtaining an API Key (Agilit-e Token)](/docs/obtaining-an-api-key-agilit-e-token) section.
+  **Note:** You will need to create an API Key in the [API Keys Module](/docs/api-keys-overview) via the Agilit-e Admin Portal. It is important that this is setup, as the API Key uniquely identifies your Agilit-e Account and tells the Agilit-e API Reference page that you are a part of Agilit-e. Once the API Key is provided for one API, it will exist for the rest This will be covered next, in the [Obtaining an API Key (Agilit-e Token)](/docs/obtaining-an-api-key-agilit-e-token) section.
 </Warning>
 
 ## API Response Schema
 
-For every API request (when the response is not an Array Buffer object - e.g. [/files](/reference/files-1) or [/generatePDF](/reference/generatepdf)), the default response is always JSON that has the following properties:
+For every API request (when the response is not an Array Buffer object - e.g. /files or /generatePDF), the default response is always JSON that has the following properties:
 
 * success (boolean) - Used to determine if the API transaction was successful or not
 * messages (array) - Holds 1 or more error descriptions if `success = false`
